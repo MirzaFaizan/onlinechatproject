@@ -1,0 +1,53 @@
+This is a Responsive Modern Front end multipage website with a backend chat application and database managment of its clients
+and workers (developers in our case).
+clients signup for ordering a project, once they signup they can select the type of project they want and order it.
+upon ordering the chat with the required developer starts.
+the developer chats and make the required project upon complettion/ cancellation he can input that.
+all of this activity is monitored by the admin.
+the admin can view every developers chat with the client and progress of each project.
+
+to install this web app:
+upload files to the webhosting.
+
+goto phpmyadmin in your hosting. make a new database called project.
+
+after creating database click import and import the project.sql file there.
+
+to establish a connection with database goto
+d_project > application > config > database.php 
+goto the bottom of file
+you should see this code
+
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'project',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+
+change the username and password that's it
+
+
+
+goto the domain, now the website will start working.
+
+to change admin username and password of the site:
+goto phpmysql and click on project table.
+now goto admin there you can add, remove or edit admin details.
+
+P.S: enjoy :)
